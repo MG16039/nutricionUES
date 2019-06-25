@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   
+	<title>Iniciar Sesión - NutriUES</title>
+</head>
+{%block tittle%}
+
+{%endblock%}
+{% block content %}
+<body>
+	<div id="login">
+		<h4> 
+      INICIAR SESIÓN</h4>
+		<h5>Ingresa tus credenciales para acceder a NutriUES</h5>
+		<form id="login">
+			<p>Nombre de Usuario</p>
+			<input type="text" name="user" maxlength="10" required="true" placeholder="Escriba su nombre de usuario">
+			<p>Contraseña</p>
+			<input type="text" name="user" maxlength="10" required="true" placeholder="Escriba su contraseña">
+			<br>
+      <br>
+      <form method="GET" action="http://localhost:8000/registroAB/">
+      <input type="submit"  value="Acceder">
+    </form>
+		</form>
+	</div>
+</body>
+{%endblock%}
+</html>

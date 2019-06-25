@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registro de Nuevo Paciente: Datos de Consulta Parte 2 - NutriUES</title>
+	</head>
+	<body>
+		<H1>REGISTRO DE NUEVO PACIENTE</H1>
+		<div id="datosPaciente5">
+			<form id="registroPacientes3A">
+				<h5>E. HISTORIA DIETÉTICA.</h5>
+				<table border="2" bordercolor="green" style="border: 2px solid rgba(100,200,0,0.3);">
+					<caption>Alimentos ingeridos el día anterior</caption>
+					<tr style="border: 2px solid rgba(100,200,0,0.3);">
+						<td>
+							<p>Desayuno</p>
+						</td>
+						<td>
+							<p>Refrigerio</p>
+						</td>
+						<td>
+							<p>Almuerzo</p>
+						</td>
+						<td>
+							<p>Refrigerio</p>
+						</td>
+						<td>
+							<p>Cena</p>
+						</td>
+					</tr>
+					<tr style="border: 2px solid rgba(100,200,0,0.3);">
+						<td>
+							<input type="submit" name="desayuno" value="Agregar" src="">
+						</td>
+						<td>
+							<input type="submit" name="refrigerio1" value="Agregar" src="">
+						</td>
+						<td>
+							<input type="submit" name="almuerzo" value="Agregar" src="">
+						</td>
+						<td>
+							<input type="submit" name="refrigerio2" value="Agregar" src="">
+						</td>
+						<td>
+							<input type="submit" name="cena" value="Agregar" src="">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div id="datosPaciente6">
+			<form id="registroPacientes3B">
+				 <h5>F. ANTECEDENTES NUTRICIONALES</h5>
+				 <p>Consumo de agua (tazas): <input type="number" name="consAguaPaciente" required="true"> &nbsp;&nbsp;&nbsp;&nbsp; Restricciones por cultura/religión: <input type="text" name="restricPaciente"> &nbsp;&nbsp;&nbsp;&nbsp;Alergias: <input type="text" name="alerPaciente"></p>
+				 <p>Suplementos: <input type="text" name="suplePaciente"> &nbsp;&nbsp;&nbsp;&nbsp; Preferencias: <input type="text" name="prefePaciente"> &nbsp;&nbsp;&nbsp;&nbsp;Lactancia: <input type="radio" name="lac" value="s">Sí <input type="radio" name="lac" value="n">No</p>
+				 <p>Factores que afectan ingesta: <input type="checkbox" name="factAfe" value="sbf">Síntomas bucofaríngeos <input type="checkbox" name="factAfe" value="gast">Gastroenteritis. </p>
+				 <p>Acceso Económico: <input type="radio" name="aceco" value="s">Sí <input type="radio" name="aceco" value="n">No &nbsp;&nbsp;&nbsp;&nbsp; Discapacidad física: <input type="text" name="discPaciente"> &nbsp;&nbsp;&nbsp;&nbsp; Vive y transporta solo: <input type="radio" name="pacsolo" value="s">Sí <input type="radio" name="pacsolo" value="n">No</p>
+			</form>
+		</div>
+		<form method="GET" action="http://localhost:8000/registroF/">
+            <input type="submit" value="Siguiente">
+	</body>
+</html>

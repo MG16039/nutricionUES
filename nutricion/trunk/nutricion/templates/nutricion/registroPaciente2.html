@@ -1,0 +1,22 @@
+<!-- Hereda el header -->
+{% extends 'base/header.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>REGISTRO DE NUEVO PACIENTE</h2>
+        <div id="datosPaciente3">
+            <form id="registroPaciente2A" style="border:5px; border-color:black;">
+                <h5>C. DATOS ANTROPOMÉTRICOS</h5>
+                <P>Sólo Embarazo</P>
+                <p>Peso preconcepcional: <input type="text" name="ppcPaciente">  Edad gestacional: <input type="text" name="egesPaciente">  Altura Uterina:<input type="text" name="alUtePaciente"></p>
+                <p>Sólo Prematuro</p>
+                <p>Peso al nacer (lb): <input type="text" name="pesoNacL_Paciente"> (kg): <input type="text" name="pesoNacK_Paciente" disabled=true>  Longitud al nacer (cm): <input type="number" name="longNacPaciente"> Edad gestacional: <input type="text" name="egep_Paciente"></p>
+                <p>Edad corregida: <input type="text" name="ecorPaciente" disabled=true>  </p>
+            </form>
+        </div>
+        <form method="GET" action="http://localhost:8000/registroE/">
+            <input type="submit" value="Siguiente">
+    </body>
+    {%endblock%}
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Nuevo Paciente: Cálculo de Nutrientes - NutriUES</title>
+</head>
+<body>
+	<H1>REGISTRO DE NUEVO PACIENTE</H1>
+	<div id="datosPaciente7">
+		<form id="registroPaciente4A">
+			<h5>G. ACTIVIDAD FÍSICA Y CÁLCULO DE NUTRIENTES.</h5>
+			<p>Actividad física: <input type="radio" name="actFisPaciente" value="s">Sedentaria <input type="radio" name="actFisPaciente" value="m">Moderada <input type="radio" name="actFisPaciente" value="i">Intensa</p>
+			<input type="submit" name="calcCalorias" value="Calcular Calorías">
+			<p>Calorías prescritas: <input type="text" name="calPres"> &nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" name="calcNutri" value="Calcular Nutrientes"></p>
+			<p>Carbohidratos: <input type="text" name="carbCalc" readonly="true"> &nbsp;&nbsp;&nbsp;&nbsp; Proteínas: <input type="text" name="protCalc" readonly="true"> &nbsp;&nbsp;&nbsp;&nbsp; Grasas: <input type="text" name="grasCalc" readonly="true"></p>
+			<p>Seleccionar Dieta: <input type="submit" name="selecDieta" value="Seleccionar"> </p>
+		</form>
+	</div>
+	<input type="submit" name="finRegistro" value="Finalizar Registro">
+
+	<form method="GET" action="http://localhost:8000/home/">
+		<input type="submit" value="Siguiente">
+</body>
+</html>

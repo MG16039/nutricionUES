@@ -1,0 +1,35 @@
+<!-- Hereda el header -->
+<!--LISTA LA VISTA-->
+{% extends 'base/header.html'%}
+{% block content %} 
+<!DOCTYPE HTML>
+    <html>
+        <body>
+           <h2>REGISTRO DE NUEVO PACIENTE</h2>
+           <div id="datosPaciente1">
+                <form id="registroPaciente1A" style="border:5px; border-color:black;">
+                    <h5>A. DATOS GENERALES</h5>
+                    <p>Nombre: <input type="text" name="nombrePaciente" size=40 required> Apellidos: <input type="text" name="apellidosPaciente" size=40 required>  Edad: <input type="number" name="edadPaciente" size="2" required>  Años</p>
+                    <p>Sexo: <input type="radio" name="hm" value="h">Hombre <input type="radio" name="hm" value="m">Mujer &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Ocupacion: <input type="text" name="ocupacion" size=40 required></p>
+                    <p>Fecha de Nacimiento: <input type="date" name="fechaNacPaciente" required> Estado Civil: <input type="radio" name="ec" value="s">Soltero <input type="radio" name="ec" value="c">Casado <input type="radio" name="ec" value="d">Divorciado <input type="radio" name="ec" value="v">Viudo <input type="radio" name="ec" value="a">Acompañado  </p>
+                    <p>Telefono: <input type="number" name="telPaciente" size=20 required>   Escolaridad: <input type="radio" name="escPaciente" value="Pri">Primaria <input type="radio" name="escPaciente" value="Sec">Secundaria <input type="radio" name="escPaciente" value="Bac">Bachillerato <input type="radio" name="escPaciente" value="Uni">Universitario <input type="radio" name="escPaciente" value="Sup">Superior no universitario</p>
+                    <p>Correo: <input type="text" name="correoPaciente" size=40 required>   Diagnóstico de referencia: <input type="text" name="diagPaciente" size=30 required></p>
+                    <p>Médico que refiere: <input type="text" name="medRefPaciente" size=30 required>  Especialidad que refiere: <input type="text" name="espRefPaciente" size=30 required></p>
+                    <p>Patologías Asociadas: <input type="text" name="patAsoPaciente" size=40 required></p>
+                </form>
+            </div>
+            <div id="datosPaciente2">
+                <form id="registroPaciente1B" style="border:5px; border-color:black;">
+                    <h5>B. EVALUACIÓN NUTRICIONAL</h5>
+                    <P>Colesterol: <input type="number" name="colPaciente" required> LDL: <input type="number" name="ldlPaciente" required> HDL: <input type="number" name="hdlPaciente" required> Glucosa: <input type="number" name="gluPaciente" required></P>
+                    <p>Ácido Úrico: <input type="number" name="aurPaciente" required> Creatinina: <input type="number" name="crePaciente" required> Hemoglobina: <input type="number" name="hemPaciente" required></p>
+                </form>
+            </div>
+            <br>
+            <br>
+            <form method="GET" action="http://localhost:8000/registroCD/">
+            <input type="submit" value="Siguiente">
+        </form>
+        </body>
+    </html>
+{% endblock%}
