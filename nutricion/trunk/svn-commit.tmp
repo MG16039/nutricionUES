@@ -1,0 +1,9 @@
+arreglando algunas cosillas que arruine
+--Esta línea y las que están debajo serán ignoradas--
+
+M    nutricion/nutricion/settings.py
+A  + nutricion/static/css/index.css
+A  + nutricion/static/img
+_M   nutricion/static/img/bgrd.jpg
+_M   nutricion/static/img/login.jpg
+M    nutricion/templates/nutricion/login.html

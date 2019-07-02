@@ -29,7 +29,7 @@ SECRET_KEY = 'aurnk#+#0#eyx-20z$uhdksn&efusn*kdkr0#j!zu6s-8k*gmi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -46,11 +46,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     'apps.consulta',
     'apps.dieta',
     'apps.login',
     'apps.nutricionista',
     'apps.paciente',
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,6 +85,15 @@ TEMPLATES = [
 TEMPLATE_DIRS = (
     os.path.join(RUTA_PROYECTO, 'templates'),
 )
+
+#STATICFILES_DIRS = (os.path.join(RUTA_PROYECTO, 'statics'))
+STATICFILES_DIRS = (
+     os.path.join(RUTA_PROYECTO, 'static'),
+)
+
+STATIC_ROOT = os.path.join(os.path.dirname(RUTA_PROYECTO), 'static')
+STATIC_URL = '/static/'
+
 
 WSGI_APPLICATION = 'nutricion.wsgi.application'
 
@@ -121,9 +132,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
 
 #Para el login
-#LOGIN_REDIRECT_URL = reversed_lazy('paciente:registarPaciente')'/'
+LOGIN_URL = reverse_lazy('login')       #me dirijo a la url login
+LOGIN_REDIRECT_URL = '/home'            #donde queremos que se vaya al usuario cuando se logee
+lOGOUT_URL = '/login/'     #me redirijo a la url del login
 
-#STATICFILES_DIRS = (os.path.join(RUTA_PROYECTO, 'statics'))
+
